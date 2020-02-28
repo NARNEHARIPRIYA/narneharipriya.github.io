@@ -323,18 +323,8 @@
     border:2px solid black;
 }
 
-
-#text1{
-    float:left;
-    padding-left:10px;
-    padding-right:10px;
-}
-* {
-    font-family: Helvetica, Arial, sans-serif;
-    text-align: center;
-    }
      
-    #submit {
+    #rollDice {
     background-color: rgb(200, 100, 100);
     border: none;
     color: rgb(255, 255, 255);
@@ -342,16 +332,8 @@
     text-transform: uppercase;
     width: 200px;
     cursor: pointer;
+    
     }
      
-    #output {
-    height: 100px;
-    width: 100px;
-    padding: 50px;
-    margin: 50px auto;
-    border: 2px solid gray;
-    border-radius: 5px;
-    font-size:80px;
-    }
-
+   
     

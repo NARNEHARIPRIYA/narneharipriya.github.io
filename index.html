@@ -8,60 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="style.css">
  <style>
-     /* * {
-  font-family: Helvetica, Arial, sans-serif;
-  text-align: center;
-} */
-button {
-  background-color: rgb(82, 186, 179);
-  border-radius: 6px;
-  border: none;
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  text-transform: uppercase;
-  width: 200px;
-  cursor: pointer;
-}
-#placeholder {
-  height: 100px;
-  width: 100px;
-  padding: 50px;
-  margin: 50px auto;
-  border: 1px solid gray;
-  border-radius: 10px;  
-  font-size:80px;
-}
- </style>
- <!-- <script src="app.js"></script> -->
- <script>
-     var dice = {
-  sides: 6,
-  roll: function () {
-    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-    return randomNumber;
-  }
-}
-
-
-
-//Prints dice roll to the page
-
-function printNumber(number) {
-  var placeholder = document.getElementById('placeholder');
-  placeholder.innerHTML = number;
-}
-
-// var button = document.getElementById('button1');
-// console.log(button.value);
-// button.addEventListener("click",res);
-//  function res() {
-//   var result = dice.roll();
-//   printNumber(result);
-// }
-
-var button
-
- </script>
+    #number {
+        width: 70px;
+        height: 50px;
+        border: 2px solid black;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px 0 0 0;
+        margin: 40px 220px 0;
+    }
+    #rollDice{
+        padding:20px;
+        font-weight: bold;
+        margin: 10px 150px;
+    }
+</style>
+<script>
+    
+</script>
+<script src="app.js"></script>
  
 </head>
 
@@ -184,9 +149,9 @@ var button
                 <div class="red"></div>
                 <div><img src="./Images/star.jpg" alt="photo" style=" max-width:30px;max-height:35px;"/></div>
                 <div></div>
-                <div class="red"></div>
+                <div class="red" ></div>
                 <div></div>
-                <div class="red"></div>
+                <div class="red" id="redHome"></div>
                 <div class="red"></div>
                 <div></div>
                 <div></div>
@@ -203,22 +168,23 @@ var button
             </div>
         </div>
     </div>
-<div id="main">
-    <p id="placeholder">
-  
+
+    <p id="number">
+        Roll
     </p>
-    <button id="button1">Roll Dice</button>
+    <button id="rollDice" onclick="generate()">Roll Dice</button>
+    <div id="main">
     <!-- red pawns  start top 28 left 318-->
-    <div class="pawns" id="redpawn1"    onclick="randomMove('red',1)"       style="background-color:yellow;top:201px;left:420px;"></div>
-    <div class="pawns" id="redpawn2"    onclick="randomMove('red',2)"       style="background-color:yellow;top:201px;left:346px;"></div>
-    <div class="pawns" id="redpawn3"    onclick="randomMove('red',3)"       style="background-color:yellow;top:130px;left:420px;"></div>
-    <div class="pawns" id="redpawn4"    onclick="randomMove('red',4)"       style="background-color:yellow;top:130px;left:346px;"></div>
+    <div class="pawns" id="yellowpawn1"    onclick="randomMove('yellow',1)"       style="background-color:yellow;top:201px;left:420px;"></div>
+    <div class="pawns" id="yellowpawn2"    onclick="randomMove('yellow',2)"       style="background-color:yellow;top:201px;left:346px;"></div>
+    <div class="pawns" id="yellowpawn3"    onclick="randomMove('yellow',3)"       style="background-color:yellow;top:130px;left:420px;"></div>
+    <div class="pawns" id="yellowpawn4"    onclick="randomMove('yellow',4)"       style="background-color:yellow;top:130px;left:346px;"></div>
 
     <!-- yellow pawns  start top 523 left 218-->
-    <div class="pawns" id="yellowpawn1" onclick="randomMove('yellow',1)"    style="background-color:red;top:431px;left:47px;"></div>
-    <div class="pawns" id="yellowpawn2" onclick="randomMove('yellow',2)"    style="background-color:red;top:431px;left:120px;"></div>
-    <div class="pawns" id="yellowpawn3" onclick="randomMove('yellow',3)"    style="background-color:red;top:500px;left:47px;"></div>
-    <div class="pawns" id="yellowpawn4" onclick="randomMove('yellow',4)"    style="background-color:red;top:500px;left:120px;"></div>
+    <div class="pawns" id="redpawn2" onclick="randomMove('red',2)"    style="background-color:red;top:431px;left:120px;"></div>
+    <div class="pawns" id="redpawn1" onclick="randomMove('red',1)"    style="background-color:red;top:431px;left:47px;"></div>
+    <div class="pawns" id="redpawn3" onclick="randomMove('red',3)"    style="background-color:red;top:500px;left:47px;"></div>
+    <div class="pawns" id="redpawn4" onclick="randomMove('red',4)"    style="background-color:red;top:500px;left:120px;"></div>
 
     <!-- green pawns  start top 227 left 22-->
     <div class="pawns" id="greenpawn1"  onclick="randomMove('green',1)"     style="background-color:green;top:200px;left:120px;"></div>
@@ -231,8 +197,7 @@ var button
     <div class="pawns" id="bluepawn2"   onclick="randomMove('blue',2)"      style="background-color:blue;top:430px;left:350px;"></div>
     <div class="pawns" id="bluepawn3"   onclick="randomMove('blue',3)"      style="background-color:blue;top:500px;left:350px;"></div>
     <div class="pawns" id="bluepawn4"   onclick="randomMove('blue',4)"      style="background-color:blue;top:500px;left:420px;"></div>
-
-        </div>
+     </div>      
 </body>
 
 </html>
