@@ -144,6 +144,10 @@
     background-color:red;
 }
 
+.redHome{
+    background-color: white;
+}
+
 .blue {
     background-color:blue;
 }
@@ -151,6 +155,7 @@
 .yellow {
     background-color:yellow;
 }
+
 
 .white {
     background-color:white;
@@ -314,13 +319,6 @@
 #main{
     width:1000px;
     float:left;
-}
-.pawns{
-    width:30px;
-    height:30px;
-    border-radius:20px;
-    position:absolute;
-    border:2px solid black;
 }
 
      
